@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>মারকাযু উলুমিল কুরআন</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+      font-family: 'Tiro Bangla', serif;
+    }
+    .header-area {
+      background-color: #064e3b;
+    }
+  </style>
+</head>
+<body class="bg-green-50 overflow-x-hidden">
+  <!-- Header -->
+  <header class="header-area shadow p-4">
+    <div class="flex flex-col items-center justify-center text-center">
+      <h1 class="text-3xl md:text-5xl font-bold text-white">মারকাযু উলুমিল কুরআন বালক-বালিকা শাখা</h1>
+    </div>
+  </header>
+
+  <!-- Navigation Buttons -->
+  <section class="py-8 px-2 sm:px-4 md:px-10 lg:px-20">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 text-center text-sm">
+      <button onclick="toggleSection('departments')" class="bg-green-700 text-white py-3 px-4 rounded hover:bg-green-800">বিভাগ সমূহ</button>
+      <button onclick="toggleSection('features')" class="bg-green-700 text-white py-3 px-4 rounded hover:bg-green-800">বৈশিষ্ট্য সমূহ</button>
+      <button onclick="toggleSection('admission')" class="bg-green-700 text-white py-3 px-4 rounded hover:bg-green-800">ভর্তি ফরম</button>
+      <button onclick="toggleSection('notice')" class="bg-green-700 text-white py-3 px-4 rounded hover:bg-green-800">নোটিশ</button>
+      <button onclick="toggleSection('contact')" class="bg-green-700 text-white py-3 px-4 rounded hover:bg-green-800">যোগাযোগ</button>
+    </div>
+  </section>
+
+  <!-- Your sections will appear here -->
+
+  <script>
+    function toggleSection(id) {
+      const sections = ['departments', 'features', 'admission', 'notice', 'contact'];
+      sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          if (sectionId === id) {
+            section.classList.remove('hidden');
+            window.scrollTo({ top: section.offsetTop - 60, behavior: 'smooth' });
+          } else {
+            section.classList.add('hidden');
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
